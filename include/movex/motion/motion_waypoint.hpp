@@ -27,17 +27,17 @@ struct WaypointMotion {
 
     void setNextWaypoint(const Waypoint& waypoint) {
         waypoints = { waypoint };
-        reload = true;
+        reload = false;
     }
 
     void setNextWaypoints(const std::vector<Waypoint>& waypoints) {
         this->waypoints = waypoints;
-        reload = true;
+        reload = false;
     }
 
     void finish() {
         return_when_finished = true;
-        reload = true;
+        reload = false;
     }
 };
 
